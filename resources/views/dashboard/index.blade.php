@@ -6,6 +6,7 @@
         <thead>
             <th>#</th>
             <th>Url</th>
+            <th>Shorten</th>
             <th>View</th>
             <th>Action</th>
         </thead>
@@ -16,6 +17,11 @@
                     <td>
                         <a href="{{ $url->url }}" target="_blank">
                             {{ $url->url }}
+                        </a>
+                    </td>
+                    <td>
+                        <a href="{{ route('hash', $url->hashid) }}" target="_blank">
+                            {{ $url->hashid }}
                         </a>
                     </td>
                     <td>{{ $url->impression }}</td>

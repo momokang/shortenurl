@@ -4,7 +4,7 @@ Auth::routes();
 Route::get('logout', 'Auth\LoginController@logout')->name('logout');
 
 Route::get('/', 'HomeController@index')->name('home');
-Route::get('/u/{hashid}', 'HomeController@url')->name('url');
+Route::get('/u/{hashId}', 'HomeController@url')->name('url');
 
 Route::group(['middleware' => 'auth'], function() {
     Route::post('/', 'HomeController@index')->name('home');
